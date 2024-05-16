@@ -9,7 +9,7 @@ import HeaderItem from "@/components/HeaderItem.vue";
         <HeaderItem to="/" text="Главная" />
         <HeaderItem to="/catalog" text="Каталог" />
         <HeaderItem to="/info" text="Доставка и оплата" />
-        <HeaderItem to="/" text="Корзина" />
+        <HeaderItem to="/cart" text="Корзина" />
         <HeaderItem to="/" text="Профиль" />
         <HeaderItem to="/registration" text="Регистрация" />
         <HeaderItem to="/authorization" text="Войти" />

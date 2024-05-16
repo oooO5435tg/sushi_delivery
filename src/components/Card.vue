@@ -10,18 +10,48 @@ const props = defineProps({
 </script>
 
 <template>
-  <div class="sushi-card">
-    <h4>{{ props.item.name }}</h4>
-    <p>{{ props.item.price }}$</p>
+  <div class="card-instance">
+    <div class="card-img">
+      <img src="../assets/img/sushi.png" alt="СУШИ">
+    </div>
+    <div class="card-name">
+      <h3>{{ props.item.name }}</h3>
+      <p>{{ props.item.price }}$</p>
+    </div>
   </div>
 </template>
 
 <style scoped>
-.sushi-card {
-  width: 18.75rem;
+.card-instance {
+  max-width: 18.75rem;
   height: 25rem;
-  border: 1px solid #ccc;
-  margin: 0 3rem 3rem 0;
-  padding: 1rem;
+  border: 1px solid #E23030;
+  border-radius: 10px;
+  background-color: #FFEFEF;
+}
+
+.card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.card-name {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5%;
+}
+
+.card-name h3 {
+  font-size: 20px;
+  color: #E23030;
+}
+
+.card-name p {
+  font-size: 16px;
+  color: #B61B1B;
+  margin-top: 3%;
 }
 </style>

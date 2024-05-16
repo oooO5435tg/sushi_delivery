@@ -5,6 +5,7 @@ import RegistrationView from '../views/RegistrationView.vue'
 import InfoView from '../views/InfoView.vue'
 import CatalogView from '../views/CatalogView.vue'
 import SushiView from '../views/SushiView.vue'
+import CartView from '../views/CartView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -38,6 +39,11 @@ const router = createRouter({
       path: '/sushi',
       name: 'sushi',
       component: SushiView
+    },
+    {
+      path: '/cart',
+      name: 'cart',
+      component: CartView
     }
   ]
 })
