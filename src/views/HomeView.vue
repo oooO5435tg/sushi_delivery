@@ -13,7 +13,7 @@ const cartItems = ref([
   <main>
     <div class="background">
       <div class="hero">
-        <img src="../assets/img/welcome.png" alt="welcome img">
+        <img src="../assets/img/welcome.jpg" alt="welcome img">
         <div class="search-box">
           <input type="text" placeholder="Поиск товара">
           <button>Найти</button>
@@ -42,9 +42,22 @@ main {
 }
 
 .background{
-  background-color: rgba(248, 78, 23, 0.05);
+  position: relative;
   width: 100%;
-  height: 600px;
+  height: 37.5rem;
+}
+
+.background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../assets/img/bambuk.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: brightness(60%);
 }
 
 .hero {
@@ -64,33 +77,39 @@ main {
 
 .search-box {
   position: absolute;
-  top: 3.125rem;
-  left: 31.25rem;
+  top: 3rem;
+  left: 33rem;
   padding: 10px;
   border-radius: 5px;
 }
 
 .search-box input {
+  height: 40px;
+  width: 250px;
   padding: 5px;
   border: none;
-  border-radius: 3px;
+  border-radius: 5px;
   margin-right: 5px;
 }
 
 .search-box button {
-  background-color: #333;
+  height: 40px;
+  width: 90px;
+  background-color: #E23030;
   color: #fff;
   border: none;
   padding: 5px 10px;
-  border-radius: 3px;
+  border-radius: 5px;
   cursor: pointer;
 }
 
 .home-sale {
   margin-top: 3rem;
+  text-align: center;
 }
 
 .cart-container{
+  margin-top: 3rem;
   display: flex;
   justify-content: center;
 }

@@ -41,6 +41,7 @@ const props = defineProps({
 
 .sushi-card, .sushi-card-buttons{
   display: flex;
+  align-items: center;
 }
 
 .sushi-card-buttons button{
