@@ -1,5 +1,6 @@
 <script setup>
 import { defineProps } from 'vue';
+import Favorite from '@/components/Favorite.vue';
 
 const props = defineProps({
   item: {
@@ -23,9 +24,9 @@ const props = defineProps({
         </div>
       </div>
       <div class="sushi-card-buttons">
-<!--        кнопку добавления в избранное можно вынести в компонент?-->
-        <button class="sushi-card-favourites">избранное</button>
-        <button class="sushi-card-delete">удалить</button>
+        <!--        кнопку добавления в избранное можно вынести в компонент?-->
+        <Favorite />
+        <button class="sushi-card-delete">Удалить</button>
       </div>
     </div>
   </div>
@@ -45,7 +46,15 @@ const props = defineProps({
 }
 
 .sushi-card-buttons button{
-  height: 3.125rem;
+  height: 50px;
+}
+
+.sushi-card-delete{
+  width: 200px;
+  border: none;
+  border-radius: 10px;
+  background-color: #E23030;
+  color: #ffffff;
 }
 
 .sushi-card-quantity{

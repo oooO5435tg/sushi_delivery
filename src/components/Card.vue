@@ -1,5 +1,6 @@
 <script setup>
 import { defineProps } from 'vue';
+import { useRouter } from 'vue-router';
 
 const props = defineProps({
   item: {
@@ -7,10 +8,16 @@ const props = defineProps({
     required: true
   }
 });
+
+const router = useRouter();
+
+const redirectToRegistration = () => {
+  router.push('/product');
+};
 </script>
 
 <template>
-  <div class="card-instance">
+  <div class="card-instance" @click="redirectToRegistration">
     <div class="card-img">
       <img src="../assets/img/sushi.png" alt="СУШИ">
     </div>
@@ -28,13 +35,14 @@ const props = defineProps({
   border: 1px solid #E23030;
   border-radius: 10px;
   background-color: #FFEFEF;
+  cursor: pointer; /* Курсор указывающий на возможность клика */
 }
 
 .card-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 10px 10px 0 0;
 }
 
 .card-name {

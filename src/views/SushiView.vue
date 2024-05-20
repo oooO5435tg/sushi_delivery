@@ -55,7 +55,7 @@ let selectedSort = ref('');
 
       <!-- Карточки товаров -->
       <div class="sushi-cards">
-        <Card v-for="item in sushiItems" :key="item.name" :item="item" />
+        <Card v-for="item in sushiItems" :key="item.name" :item="item"/>
       </div>
     </div>
   </main>
@@ -69,7 +69,7 @@ main {
   align-items: center;
 }
 
-.sushi-container{
+.sushi-container {
   display: flex;
   margin-top: 3rem;
 }

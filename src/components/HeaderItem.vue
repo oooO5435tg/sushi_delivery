@@ -1,5 +1,5 @@
 <script setup>
-import { RouterLink } from 'vue-router';
+import { RouterLink, useRoute } from 'vue-router';
 
 defineProps({
   to: {
@@ -11,12 +11,16 @@ defineProps({
     required: true
   }
 });
+
+const route = useRoute();
 </script>
 
 <template>
-  <RouterLink :to="to">{{ text }}</RouterLink>
+  <RouterLink :to="to" :class="{ active: route.path === to }">{{ text }}</RouterLink>
 </template>
 
 <style scoped>
-
+.active {
+  color: #E23030;
+}
 </style>
